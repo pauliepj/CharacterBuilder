@@ -1,13 +1,15 @@
-package com.cognixia.jump.model.armor;
+package com.cognixia.jump.model.equipment.armor;
 
 import java.util.List;
 
 import com.cognixia.jump.model.Enhancement;
-import com.cognixia.jump.model.Equipment;
 import com.cognixia.jump.model.enhancements.LightMaterials;
+import com.cognixia.jump.model.equipment.Armor;
 
-public class AirshipTrooperRegalia implements Equipment{
+public class AirshipTrooperRegalia implements Armor{
 
+	public String name = "Airship Trooper Regalia";
+	
 	public Integer constitutionRequirement;
 
 	public Integer timeToCraft;
@@ -47,16 +49,19 @@ public class AirshipTrooperRegalia implements Equipment{
 		this.enhancements = enhancement;
 	}
 
-	public AirshipTrooperRegalia(Integer constitutionRequirement, Integer timeToCraft, Integer defenseBonus, Integer cost, List<Enhancement> enhancement) {
+	public AirshipTrooperRegalia(String name, Integer constitutionRequirement, Integer timeToCraft, Integer defenseBonus, Integer cost, List<Enhancement> enhancement) {
 		super();
+		this.name = "Airship Trooper Regalia";
 		enhancement.add(lightm);
 		this.enhancements = enhancement;
 		this.constitutionRequirement = 14;
+		
 		for(int i = 0; i <enhancement.size(); i++) {
 			if(enhancement.get(i) == lightm) {
 				this.constitutionRequirement --;
 			}
 		}
+		
 		this.timeToCraft = 8;
 		this.defenseBonus = 5;
 		this.cost = 675;
