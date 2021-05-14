@@ -1,12 +1,7 @@
 package com.cognixia.jump.model;
 
 import java.util.List;
-
 import javax.persistence.Entity;
-
-import com.cognixia.jump.model.skills.Athletics;
-import com.cognixia.jump.model.skills.Endurance;
-
 @Entity
 public class CharacterClass {
 	
@@ -30,4 +25,7 @@ public class CharacterClass {
 	List<RacialTalent> racialTalents;
 	List<GeneralTalent> generalTalents;
 	List<CombatTalent> combatTalents;
+	List<StealthTalent> stealthTalents;
+	List<SocialTalent> socialTalents;
+	
 }
