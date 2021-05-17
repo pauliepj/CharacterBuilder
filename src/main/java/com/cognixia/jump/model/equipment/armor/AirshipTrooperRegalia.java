@@ -8,7 +8,7 @@ import com.cognixia.jump.model.equipment.Armor;
 
 public class AirshipTrooperRegalia implements Armor{
 
-	public String name = "Airship Trooper Regalia";
+	public String name;
 	
 	public Integer constitutionRequirement;
 
@@ -55,7 +55,6 @@ public class AirshipTrooperRegalia implements Armor{
 		enhancement.add(lightm);
 		this.enhancements = enhancement;
 		this.constitutionRequirement = 14;
-		
 		for(int i = 0; i <enhancement.size(); i++) {
 			if(enhancement.get(i) == lightm) {
 				this.constitutionRequirement --;

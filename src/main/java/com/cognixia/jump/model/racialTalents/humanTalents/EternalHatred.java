@@ -1,8 +1,8 @@
 package com.cognixia.jump.model.racialTalents.humanTalents;
 
-import com.cognixia.jump.model.CharacterClass;
+import com.cognixia.jump.model.racialTalents.HumanTalent;
 
-public class EternalHatred {
+public class EternalHatred implements HumanTalent{
 	
 	public String name = "Eternal Hatred";
 	public String description = "Specify a race other than human.  "
