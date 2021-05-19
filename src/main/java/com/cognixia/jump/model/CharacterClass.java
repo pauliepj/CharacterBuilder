@@ -1,8 +1,6 @@
 package com.cognixia.jump.model;
 
 import java.util.List;
-import javax.persistence.Entity;
-@Entity
 public class CharacterClass {
 	//Each individual category will need it's own controller, at least for talents and Arkana
 	//and probably equipment too.
@@ -25,13 +23,14 @@ public class CharacterClass {
 	List<StealthTalent> stealthTalents;
 	List<SocialTalent> socialTalents;
 	List<ArkanaTalent> arkanaTalents;
-//-----------------------------Arkana------------------
+//-----------------------------ARKANA------------------
 	Arkana arkana;
 	List<Spell> spells;
-//---------------------------Conviction----------------
+//---------------------------CONVICTION----------------
 	Conviction conviction;
-	List<ConvictionAspect> aspects;
-	List<ConvictionTalent> convictionTalents;
+	
+//--------------------------MARTIAL ARTS----------------
+	MartialArts martialArts;
 	
 	
 }

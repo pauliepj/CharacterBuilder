@@ -6,18 +6,12 @@ import com.cognixia.jump.model.ConvictionAspect;
 
 public class AirAspect implements ConvictionAspect{
 
-	public Integer rank;
 	public String omen;
 	public String scry;
 	public String opposed;
 	public String aura;
 	public List<airPower> graces;
-	public Integer getRank() {
-		return rank;
-	}
-	public void setRank(Integer rank) {
-		this.rank = rank;
-	}
+	
 	public String getOmen() {
 		return omen;
 	}
@@ -48,9 +42,8 @@ public class AirAspect implements ConvictionAspect{
 	public void setPowers(List<airPower> powers) {
 		this.graces = powers;
 	}
-	public AirAspect(Integer rank, String omen, String scry, String opposed, String aura, List<airPower> powers) {
+	public AirAspect(String omen, String scry, String opposed, String aura, List<airPower> powers) {
 		super();
-		this.rank = rank;
 		this.omen = "The character grows small, ethereal wings on their back. They are intangible, "
 				+ "passing through any clothing or armor worn by the marshal.";
 		this.scry = "Sense the breath of all living things in range."
