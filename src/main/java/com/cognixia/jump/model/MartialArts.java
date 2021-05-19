@@ -2,6 +2,8 @@ package com.cognixia.jump.model;
 
 import java.util.List;
 
+import com.cognixia.jump.model.martialArts.MartialArtsTalent;
+
 public class MartialArts {
 
 	public Integer level;
@@ -10,6 +12,7 @@ public class MartialArts {
 	public List<MartialArtsStyle> styles;
 	public List<Impact> impacts;
 	public List<RacialStyle> racialStyles;
+	public List<MartialArtsTalent> martialArtsTalents;
 	
 	public Integer getLevel() {
 		return level;

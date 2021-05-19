@@ -1,4 +1,6 @@
-package com.cognixia.jump.model.styles.effsaeraeActions;
+package com.cognixia.jump.model.martialArts.styles.effsaeraeActions;
+
+import com.cognixia.jump.model.martialArts.styles.EffsaeraeAction;
 
 public class CounterAttack implements EffsaeraeAction{
 	
