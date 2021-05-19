@@ -12,14 +12,10 @@ public class CharacterClass {
 	Integer health;
 //-----------------------------ATTRIBUTES-------------------
 	List<Attribute> attributes;
-	
 //-----------------------------DEFENSES-------------------
-	
 	List<Defense> defenses;
-	
 //------------------------------SKILLS--------------------
 	List<Skill> skills;
-	
 //----------------------------EQUIPMENT------------
 	List<Equipment> equipment;
 //----------------------------TALENTS--------------
@@ -32,5 +28,10 @@ public class CharacterClass {
 //-----------------------------Arkana------------------
 	Arkana arkana;
 	List<Spell> spells;
+//---------------------------Conviction----------------
+	Conviction conviction;
+	List<ConvictionAspect> aspects;
+	List<ConvictionTalent> convictionTalents;
+	
 	
 }
