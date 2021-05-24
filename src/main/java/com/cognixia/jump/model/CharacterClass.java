@@ -9,6 +9,12 @@ public class CharacterClass {
 	String race;
 	Integer health;
 //-----------------------------ATTRIBUTES-------------------
+	Attribute charisma;
+	Attribute strength;
+	Attribute dexterity;
+	Attribute intelligence;
+	Attribute wisdom;
+	Attribute constitution;
 	List<Attribute> attributes;
 	
 //-----------------------------DEFENSES-------------------
@@ -77,11 +83,66 @@ public class CharacterClass {
 	}
 
 	public List<Attribute> getAttributes() {
+		setAttributes();
 		return attributes;
 	}
 
-	public void setAttributes(List<Attribute> attributes) {
-		this.attributes = attributes;
+	public Attribute getCharisma() {
+		return charisma;
+	}
+
+	public void setCharisma(Attribute charisma) {
+		this.charisma = charisma;
+	}
+
+	public Attribute getStrength() {
+		return strength;
+	}
+
+	public void setStrength(Attribute strength) {
+		this.strength = strength;
+	}
+
+	public Attribute getDexterity() {
+		return dexterity;
+	}
+
+	public void setDexterity(Attribute dexterity) {
+		this.dexterity = dexterity;
+	}
+
+	public Attribute getIntelligence() {
+		return intelligence;
+	}
+
+	public void setIntelligence(Attribute intelligence) {
+		this.intelligence = intelligence;
+	}
+
+	public Attribute getWisdom() {
+		return wisdom;
+	}
+
+	public void setWisdom(Attribute wisdom) {
+		this.wisdom = wisdom;
+	}
+
+	public Attribute getConstitution() {
+		return constitution;
+	}
+
+	public void setConstitution(Attribute constitution) {
+		this.constitution = constitution;
+	}
+
+	public void setAttributes() {
+		attributes.clear();
+		attributes.add(charisma);
+		attributes.add(strength);
+		attributes.add(wisdom);
+		attributes.add(intelligence);
+		attributes.add(constitution);
+		attributes.add(dexterity);
 	}
 
 	public List<Defense> getDefenses() {
@@ -188,17 +249,22 @@ public class CharacterClass {
 		this.psy = psy;
 	}
 
-	public CharacterClass(Integer characterId, String name, String race, Integer health, List<Attribute> attributes,
-			List<Defense> defenses, List<Skill> skills, List<Equipment> equipment, List<RacialTalent> racialTalents,
-			List<GeneralTalent> generalTalents, List<CombatTalent> combatTalents, List<StealthTalent> stealthTalents,
-			List<SocialTalent> socialTalents, List<ArkanaTalent> arkanaTalents, Arkana arkana, Conviction conviction,
-			MartialArts martialArts, Psy psy) {
+	public CharacterClass(Integer characterId, String name, String race, Integer health, Attribute charisma,
+			Attribute strength, Attribute dexterity, Attribute intelligence, Attribute wisdom, Attribute constitution,
+			List<Defense> defenses, List<Skill> skills, List<Equipment> equipment, List<RacialTalent> racialTalents, List<GeneralTalent> generalTalents, List<CombatTalent> combatTalents,
+			List<StealthTalent> stealthTalents, List<SocialTalent> socialTalents, List<ArkanaTalent> arkanaTalents,
+			Arkana arkana, Conviction conviction, MartialArts martialArts, Psy psy) {
 		super();
 		this.characterId = characterId;
 		this.name = name;
 		this.race = race;
 		this.health = health;
-		this.attributes = attributes;
+		this.charisma = charisma;
+		this.strength = strength;
+		this.dexterity = dexterity;
+		this.intelligence = intelligence;
+		this.wisdom = wisdom;
+		this.constitution = constitution;
 		this.defenses = defenses;
 		this.skills = skills;
 		this.equipment = equipment;
@@ -212,7 +278,9 @@ public class CharacterClass {
 		this.conviction = conviction;
 		this.martialArts = martialArts;
 		this.psy = psy;
+		setAttributes();
 	}
+
 	
 	
 }
